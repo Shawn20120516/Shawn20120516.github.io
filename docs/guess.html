@@ -1,0 +1,106 @@
+<!DOCTYPE html>  
+<html lang="zh-CN">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>！！！</title>  
+    <style>  
+        body {  
+            margin: 0;  
+            font-family: Arial, sans-serif;  
+        }  
+        .container {  
+            display: flex;  
+            flex-direction: column;  
+            height: 100vh; /* 使容器高度占满整个视口高度 */  
+        }  
+        header, footer {  
+            background-color: #333;  
+            color: white;  
+            text-align: center;  
+            padding: 1em 0;  
+        }  
+        main {  
+           display: flex;  
+           flex: 1; /* 使主要内容部分占满剩余的空间 */  
+           background-color: #f4f4f4;  
+           padding: 2em;  
+           box-sizing: border-box; /* 确保内边距不影响元素的总高度 */  
+           overflow-y: auto; /* 添加垂直滚动条（如果内容超出高度） */  
+           max-height: 100vh; /* 可选：限制最大高度为视口高度，防止内容过多时溢出视口 */  
+        } 
+        .rounded-textbox {  
+            background-color: #3c2820;  
+            color: white;  
+            line-height: 1.5;
+            text-align: justify;
+            width: 50%; /* 设置圆角文本框占主文本框的20%宽度 */  
+            height: 100%;
+            border-radius: 10px; /* 设置圆角 */  
+            border: 1px solid #000; /* 设置边框 */  
+            padding: 10px; /* 设置内边距 */  
+            box-sizing: border-box; /* 确保宽度和高度包括边框和内边距 */  
+            margin-left: auto; /* 使用自动左边距将其推至右侧 */  
+            overflow-y: auto;
+        } 
+        
+        input {  
+            font-size: 18px;  
+            padding: 5px;  
+            margin-right: 10px;  
+        }  
+  
+        button {  
+            font-size: 18px;  
+            padding: 5px 10px;  
+            cursor: pointer;  
+        }
+    </style>  
+</head>  
+<body>  
+    <div class="container">  
+        <header>  
+            <h1>猜数字——二分</h1>  
+            <p>加速~</p>  
+        </header>  
+        <main>  
+            <div style="width:45%;line-height: 1.5;text-align:center;">
+                <h1>猜数字游戏</h1>  
+                <p>猜一个1到100之间的数字:</p>  
+                <input type="number" id="guess" min="1" max="100">  
+                <button id="submitBtn">提交</button>  
+                <p id="message"></p> 
+            </div>
+            <div class="rounded-textbox" >
+<div style="text-align:center;"><h1>二分算法介绍</h1></div>
+<p>二分算法（Binary Search Algorithm）是一种在有序数组中查找某一特定元素的搜索算法。它通过逐步缩小查找范围来提高搜索效率。</p>  
+<h2>基本思想</h2>  
+<p>二分算法的基本思想是将数组分成两半，判断要查找的元素是否存在于其中一半，然后继续在存在元素的一半中继续二分，直到找到元素或范围为空。</p>  
+<h2>步骤</h2>  
+<ol>  
+    <li>初始化两个指针，low 和 high，分别指向数组的起始位置和结束位置。</li>  
+    <li>计算中间位置 mid = low + (high - low) / 2，避免直接相加导致的溢出问题。</li>  
+    <li>判断中间位置的元素是否是目标元素：</li>  
+        <ul>  
+            <li>如果是，返回 mid。</li>  
+            <li>如果目标元素小于中间位置的元素，更新 high = mid - 1，在左半部分继续查找。</li>  
+            <li>如果目标元素大于中间位置的元素，更新 low = mid + 1，在右半部分继续查找。</li>  
+        </ul>  
+    <li>重复步骤 2 和 3，直到 low > high，此时数组中不存在目标元素。</li>  
+</ol> 
+<h2>时间复杂度</h2>
+<p>二分算法的时间复杂度为 O(log n)，其中 n 是数组的长度。这是因为每次查找都将查找范围缩小一半。</p>
+<h2>应用场景</h2>  
+<p>二分算法适用于在有序数组中查找元素的场景，例如数据库中的索引查找、有序文件查找等。</p>  
+<h2>注意事项</h2>  
+<p>1. 二分算法要求数组必须是有序的。</p>  
+<p>2. 在实现二分算法时，要注意防止数组越界和溢出问题。</p>
+            </div>
+        </main>  
+        <footer>   
+            <p>咨询电话：??? ???? ????</p>  
+        </footer>  
+        <script src="script(guess).js"></script> 
+    </div>  
+</body>  
+</html>
