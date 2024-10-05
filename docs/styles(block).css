@@ -1,0 +1,78 @@
+/* styles.css */  
+        body {  
+            margin: 0;  
+            background-color: #555;  
+            font-family: Arial, sans-serif;  
+        }  
+        .container {  
+            display: flex;  
+            flex-direction: column;  
+            height: 100vh; /* 使容器高度占满整个视口高度 */  
+        }  
+        header, footer {  
+            background-color: #333;  
+            color: white;  
+            text-align: center;  
+            padding: 1em 0;  
+        }  
+        main {  
+           display: flex;  
+           flex: 1; /* 使主要内容部分占满剩余的空间 */  
+           background-color: #f4f4f4;  
+           padding: 2em;  
+           box-sizing: border-box; /* 确保内边距不影响元素的总高度 */  
+           overflow-y: auto; /* 添加垂直滚动条（如果内容超出高度） */  
+           max-height: 100vh; /* 可选：限制最大高度为视口高度，防止内容过多时溢出视口 */  
+        } 
+        .square {  
+            position: absolute;  
+            width: 50px;  
+            height: 50px;  
+            background-color: lightblue;   
+            cursor: pointer;  
+        }  
+        #score {  
+            position: absolute;  
+            top: 20px;  
+            font-size: 24px;  
+            color: white;  
+        }  
+        #game-over {  
+            display: none;  
+            position: absolute;  
+            top: 50%;  
+            left: 50%;  
+            transform: translate(-50%, -50%);  
+            font-size: 32px;  
+            color: white;  
+            background-color: rgba(0, 0, 0, 0.7);  
+            padding: 20px;  
+            border-radius: 10px;  
+            text-align: center;  
+        }  
+        #restart-button {  
+            display: none;  
+            position: absolute;  
+            bottom: 20px;  
+            left: 50%;  
+            transform: translateX(-50%);  
+            padding: 10px 20px;  
+            font-size: 18px;  
+            color: white;  
+            background-color: green;  
+            border: none;  
+            border-radius: 5px;  
+            cursor: pointer;  
+        } 
+  
+#ball {  
+    position: absolute;  
+    z-index:9999;
+    width: 100px;  
+    height: 100px;  
+    background-image: url('golden finger.png'); /* 替换为您的照片路径 */  
+    background-size: cover; /* 使照片覆盖整个div */  
+    background-position: center; /* 照片居中显示 */ 
+    pointer-events: none; /* 使小球不阻挡鼠标事件 */  
+    transition: all 0.1s ease-out; /* 添加平滑过渡效果 */  
+}

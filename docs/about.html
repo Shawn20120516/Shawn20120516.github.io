@@ -1,0 +1,70 @@
+<!DOCTYPE html>  
+<html lang="zh-CN">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>！！！</title>  
+    <style>  
+        body {  
+            margin: 0;  
+            font-family: Arial, sans-serif;  
+        }  
+        .container {  
+            display: flex;  
+            flex-direction: column;  
+            height: 100vh; /* 使容器高度占满整个视口高度 */  
+        }  
+        header, footer {  
+            background-color: #333;  
+            color: white;  
+            text-align: center;  
+            padding: 1em 0;  
+        }  
+        main {  
+           display: flex;  
+           flex: 1; /* 使主要内容部分占满剩余的空间 */  
+           background-color: #f4f4f4;  
+           padding: 2em;  
+           box-sizing: border-box; /* 确保内边距不影响元素的总高度 */  
+           overflow-y: auto; /* 添加垂直滚动条（如果内容超出高度） */  
+           max-height: 100vh; /* 可选：限制最大高度为视口高度，防止内容过多时溢出视口 */  
+        } 
+        .rounded-textbox {  
+            background-color: #3c2820;  
+            color: white;  
+            line-height: 1.5;
+            text-align: center;
+            width: 20%; /* 设置圆角文本框占主文本框的20%宽度 */  
+            height: 100%;
+            border-radius: 10px; /* 设置圆角 */  
+            border: 1px solid #000; /* 设置边框 */  
+            padding: 10px; /* 设置内边距 */  
+            box-sizing: border-box; /* 确保宽度和高度包括边框和内边距 */  
+            margin-left: auto; /* 使用自动左边距将其推至右侧 */  
+            overflow-y: auto;
+        } 
+    </style>  
+</head>  
+<body>  
+    <div class="container">  
+        <header>  
+            <h1>关于我们</h1>  
+            <p>一个优质的团队！</p>  
+        </header>  
+        <main>  
+            <div style="width:75%;line-height: 1.5;">
+                <div style="text-align:center;"><h1>凝聚卓越，共筑辉煌<br>——我们的优质团队</h1></div>
+                <p>在浩瀚的行业海洋中，我们是一艘乘风破浪的巨轮，每一桨的划动都凝聚着智慧与力量。这不是一群人的简单集合，而是一个梦想的共同体，一个以卓越为信仰、以创新为灵魂的优质团队。<br><br>我们，是梦想的编织者。在这里，每个成员都怀揣着对未来的无限憧憬，用汗水浇灌希望，以热情点燃创意的火花。我们相信，每一个细微的想法都能汇聚成改变世界的力量，每一次不懈的努力都是通往成功之巅的坚实步伐。<br><br>我们，是专业的践行者。在各自的领域内深耕细作，追求极致的技艺与精准的判断。无论是市场分析的前瞻视野，还是技术创新的深度挖掘，我们始终保持着行业领先的敏锐与敏锐，确保每一步都走在时代的前沿。<br><br>我们，是协作的典范。在这个团队中，没有孤军奋战，只有并肩作战。我们懂得，真正的力量来源于团结一心，每一次成功的背后，都是无数次思想的碰撞与默契的配合。我们珍视彼此的差异，因为正是这些不同，让我们的团队更加多元、更加坚韧。<br><br>我们，是成长的践行者。学习，于我们而言，是一场永不停歇的旅程。我们鼓励每一位成员不断探索未知，勇于挑战自我，在失败中汲取教训，在成功中总结经验。在这里，每个人都能找到属于自己的舞台，实现个人价值与团队目标的双赢。<br><br>这就是我们，一个不仅仅追求业绩，更重视文化、创新与成长的优质团队。在这个充满机遇与挑战的时代，我们携手同行，以无畏的勇气、坚定的信念，共同书写属于我们的辉煌篇章。未来，无论风雨变换，我们都将不忘初心，砥砺前行，向着更高更远的目标迈进！</p>
+            </div>
+            <div class="rounded-textbox" >
+                <h1>鸣谢文心一言提供</h1>
+                <p>本简介由文心一言大师亲手书写，摘录于此，甚是感谢！</p>
+                <img src="文心一言.png" alt="文心一言">
+            </div>
+        </main>  
+        <footer>   
+            <p>咨询电话：??? ???? ????</p>  
+        </footer>  
+    </div>  
+</body>  
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>小站(～￣▽￣)～</title>  
+    <link rel="stylesheet" href="styles.css"> <!-- 引用外部CSS文件 -->  
+</head>  
+<body>  
+    <div class="sidebar">  
+        <!-- 侧栏菜单 -->  
+        <ul>  
+            <li><a href="#" onclick="loadPage('home.html')">首页</a></li>  
+            <li><a href="#" onclick="loadPage('about.html')">关于我们</a></li>  
+            <li><a href="#" onclick="loadPage('guess.html')">猜数字——二分</a></li>  
+            <li><a href="#" onclick="loadPage('block.html')">点击方块游戏</a></li>  
+            <!-- 可以添加更多页面链接 -->  
+        </ul>  
+    </div> 
+    <div class="content">  
+        <!-- 用于嵌套页面的iframe -->  
+        <iframe id="pageFrame" src="home.html" class="iframe-content"></iframe>  
+    </div>  
+    <script>  
+        // JavaScript函数，用于在iframe中加载不同的页面  
+        function loadPage(page) {  
+            document.getElementById('pageFrame').src = page;  
+        }  
+    </script>  
+</body>  
+</html>
